@@ -11,5 +11,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        User myUser = new User();
+        myUser.name = "Mesut";
+        myUser.job = "Student";
+
+        User newUser = new User();
+        newUser.name = "Kirk";
+        newUser.job = "Musician";*/
+
+        User myUser = new User("Mesut", "Student");
+        System.out.println(myUser.name);
+
     }
 }
