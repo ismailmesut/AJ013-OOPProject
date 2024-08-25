@@ -40,9 +40,24 @@ public class MainActivity extends AppCompatActivity {
         james.setAge(60, "Mesut");
         System.out.println(james.getAge());
 
+        // Inheritance
         SuperMusician lars = new SuperMusician("Lars","Drums",55);
         System.out.println(lars.sing());
         System.out.println(lars.getAge());
+
+        // Polymorphism (Çok Biçimlilik)
+        // Polimorphism; yani Çok Biçimlilik, Kalıtım kavramı ile iç içedir. Birbirleriyle beslenirler. Kalıtım konusunda sınıfları türetmeyi görmüştük.
+        // Türetilen sınıflar, türediği üst sınıfın öğelerine sahip oluyorken bunun tersi geçerli değildi. Yani temel sınıflar, alt sınıfların üyelerine
+        // sahip olamazlar. Polimorphizm yapabilmek için Kalıtım mantığını bilmek gerekir.
+
+        // Polimorphizm, çoklu biçim veya çoklu şekil anlamına gelir. Yani Polimorphizm yapılarak bir nesne, farklı nesneler gibi davranabilir. Bir nesneye,
+        // farklı sınıflardan oluşturulmuş nesneler yüklenebilir.
+
+        // Static Polymorphism : Aynı sınıfın içerisinde farklı metodları aynı isimle kullanmaya static polymorphism denir.
+        Mathematics mathematics = new Mathematics();
+        System.out.println(mathematics.sum());
+        System.out.println(mathematics.sum(5,3));
+        System.out.println(mathematics.sum(5,3,4));
 
     }
 }
