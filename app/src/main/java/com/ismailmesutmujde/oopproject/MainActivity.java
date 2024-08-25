@@ -1,6 +1,9 @@
 package com.ismailmesutmujde.oopproject;
 
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         newUser.job = "Musician";*/
 
         User myUser = new User("Mesut", "Student");
+        System.out.println(myUser.information());
         System.out.println(myUser.name);
 
         // Encapsulation (Kapsülleme)
@@ -66,5 +70,21 @@ public class MainActivity extends AppCompatActivity {
         Dog barley = new Dog();
         barley.test();
         barley.sing();
+
+        // Abstract Classes and Methods (Soyut Sınıflar ve Metodlar)
+        // Nesneye yönelik programlamada, sınıfları miras bırakırken bazı metodların içeriğinin farklı olmasını isteyebiliriz veya bir üst sınıfta tanımladığımız ortak metod,
+        // sınıfı miras bırakacağımız alt sınıfların bazılarının ihtiyacını karşılamıyor olabilir. Bu gibi durumlarda soyut sınıfları kullanmak bizim için avantaj sağlayacaktır.
+
+        // Soyut sınıflarda amaç, nesne türetirken şablon oluşturmaktır. Soyut sınıfta tanımlanan şablon, bu sınıfı miras alan alt sınıflarda override edilerek yeniden tanımlanır.
+
+        // Soyut sınıf tanımladığımızda içerisinde mutlaka bir soyut metod bulundurması gerekmektedir. Tersini düşündüğümüzde, yani sınıf içerisinde bir soyut metod tanımladığımızda ise,
+        // sınıfı soyut işaretçisiyle işaretlemeliyiz(Sınıfı soyut sınıfa çevirmeliyiz) Bir sınıfı veya metodu soyut olarak tanımlamak için erişim belirtecinden sonra abstract anahtar
+        // sözcüğünü kullanmalıyız.
+
+        Piano myPiano = new Piano();
+        myPiano.brand = "Yamaha";
+        myPiano.digital = true;
+        myPiano.info();
+
     }
 }
